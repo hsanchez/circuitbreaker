@@ -1,0 +1,49 @@
+# Eclipse project files
+.project
+
+# IntelliJ IDEA project files
+*.iml
+.idea/
+*.ipr 
+*.iws
+
+# Java WAR directories
+WEB-INF/
+
+# General files
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.html
+# ignore dev since each of its subdirectories is a unique git repository.
+dev/**/*
+build/**/*
+
+# Tex files
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+*.synctex.gz
+
+
