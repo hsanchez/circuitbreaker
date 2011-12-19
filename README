@@ -1,0 +1,1 @@
+# Circuit breaker A software pattern inspired by the electrical circuit breaker. This pattern will help you handle failure scenarios, especially those where you have code that calls remote services such as a database or a web service, or any service that might become unavailable or non-responsive,w.

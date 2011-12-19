@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<project name="circuitbreaker" default="compile">
+    <import file="tasks.xml"/>
+
+    <path id="compile.classpath">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${build.dir}/dist"/>
+        <jar destfile="${build.dir}/dist/circuitbreaker-${version}.jar" basedir="${build.dir}/classes"/>
+    </target>
+
+    <target name="dist" depends="jar, javadoc">
+        <copy toDir="${build.dir}/dist">
+            <fileset dir="${lib.dir}" includes="*.jar"/>
+        </copy>
+        <copy toDir="${build.dir}/dist">
+            <fileset dir="${build.dir}" includes="manual/**/*"/>
+            <fileset dir="${build.dir}" includes="javadoc/**/*"/>
+        </copy>
+
+        <zip destfile="${build.dir}/circuitbreaker-${version}.zip" basedir="${build.dir}/dist"/>
+        <zip destfile="${build.dir}/circuitbreaker-${version}-src.zip"
+            basedir="." excludes="www/**/*,www,build/**/*, javadoc/**/*, build,SVN, SVN/**/*,**/SVN,CVS,CVS/**/*,**/CVS"/>
+    </target>
+
+    <target name="javadoc"
+            description="Generate Javadocs.">
+        <mkdir dir="${build.dir}/javadoc"/>
+        <javadoc sourcepath="${src.dir}"
+                 packagenames="*"
+                 excludepackagenames="tests"
+                 destdir="${build.dir}/javadoc"
+                 author="true"
+                 protected="true" windowtitle="Circuit Breaker 0.1 API">
+            <sourcepath>
+                <pathelement location="${src.dir}"/>
+            </sourcepath>
+            <classpath refid="compile.classpath"/>
+        </javadoc>
+    </target>
+
+</project>
