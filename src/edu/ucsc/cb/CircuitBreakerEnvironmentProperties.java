@@ -1,7 +1,8 @@
 package edu.ucsc.cb;
 
 /**
- * ...
+ * Keywords known by the {@link CircuitBreakerEnvironment} to load data from a
+ * circuit breaker's configuration file.
  *
  * @author hsanchez@cs.ucsc.edu (Huascar A. Sanchez)
  */

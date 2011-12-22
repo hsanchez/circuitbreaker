@@ -3,7 +3,12 @@ package edu.ucsc.cb;
 import java.lang.reflect.Constructor;
 
 /**
- * ...
+ * A convenient class for dealing with generic Exceptions.i.e., those ones
+ * product of using <E extends Exception> or <E extends Throwable> and want to
+ * do
+ * <p>
+ *   throw new E
+ * </p>
  *
  * @author hsanchez@cs.ucsc.edu (Huascar A. Sanchez)
  */

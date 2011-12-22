@@ -3,7 +3,7 @@ package edu.ucsc.cb;
 import java.util.concurrent.Callable;
 
 /**
- * ...
+ * A set of convenient utility methods for using the Circuit Breaker library.
  *
  * @author hsanchez@cs.ucsc.edu (Huascar A. Sanchez)
  */

@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * ...
+ * A convenient class for dealing with persisted on file circuit breaker settings.
  *
  * @author hsanchez@cs.ucsc.edu (Huascar A. Sanchez)
  */
